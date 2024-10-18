@@ -1,14 +1,14 @@
-const express = require("express");
+const express = require('express');
 
-// make an instance of the express server 
+// make an instance of the express server
 const app = express();
 
-app.get("/", (request, response) => {
+app.get('/', (request, response) => {
     response.json({
-        message: "hello world!"
+        message: 'hello world!',
     });
 });
 
 module.exports = {
-    app
-}
+    app,
+};

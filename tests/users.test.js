@@ -81,6 +81,7 @@ describe('Users controller', () => {
             username: 'jason',
             password: 'SuperCoolPassword1',
         });
+        console.log(response);
     });
 
     test.skip('User delete route returns return a number of users deleted', async () => {
@@ -89,5 +90,6 @@ describe('Users controller', () => {
             username: 'jason',
             password: 'SuperCoolPassword1',
         });
+        console.log(response);
     });
 });

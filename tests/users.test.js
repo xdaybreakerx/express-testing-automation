@@ -21,7 +21,7 @@ describe('Users controller', () => {
         ];
 
         expect(response.body.data).toEqual(
-            expect.arrayContaining(expectedUsers),
+            expect.arrayContaining(expectedUsers)
         );
     });
 
@@ -32,7 +32,7 @@ describe('Users controller', () => {
 
         expect(response.body.result.id).toBe(targetUserId);
         expect(response.body.result.username).toBe(
-            'Pretend this is a username from the database',
+            'Pretend this is a username from the database'
         );
     });
 
@@ -57,7 +57,7 @@ describe('Users controller', () => {
         // 	password:"SuperCoolPassword1"
         // });
         expect(response.body.authHeaderData).toBe(
-            'Example string for header value',
+            'Example string for header value'
         );
     });
 

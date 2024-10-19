@@ -9,7 +9,7 @@ describe('Root route', () => {
 
         // check the body of the response for a "Hello world!" string
         expect(response.body.message).toBe('hello world!');
-        // expect(response.t).toBe(200);
+        expect(response.status).toBe(200);
     });
 
     test('Server returns a response with no auth headers because we are not sending auth data', async () => {

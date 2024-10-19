@@ -9,4 +9,16 @@ router.get('/', (request, response) => {
     });
 });
 
+// POST localhost:3000/signup
+router.post('/signup', async (request, response) => {
+    let receivedUserData = request.body;
+
+    receivedUserData.password = 'EncryptedPassword';
+
+    // receivedUserData is a placeholder for making a new user in db
+    let placeholderDatabaseResult = { ...receivedUserData };
+
+    response.json(placeholderDatabaseResult);
+});
+
 module.exports = router;

@@ -12,9 +12,9 @@ describe('Root route', () => {
         // expect(response.t).toBe(200);
     });
 
-    test("Server returns a response with no auth headers because we are not sending auth data", async () => {
-        const response = await request(app).get("/");
+    test('Server returns a response with no auth headers because we are not sending auth data', async () => {
+        const response = await request(app).get('/');
 
-        expect(response.headers["Authorization"]).toBeFalsy();
-    })
+        expect(response.headers['Authorization']).toBeFalsy();
+    });
 });

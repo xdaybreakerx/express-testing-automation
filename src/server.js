@@ -15,7 +15,7 @@ app.get('/', (request, response) => {
 const UserController = require('./controllers/UserController');
 app.use('/users', UserController);
 
-app.use((error, response) => {
+app.use((error, request, response, next) => {
     console.log('Server threw an error with messsage: ' + error.message);
 
     response.json({
@@ -23,6 +23,7 @@ app.use((error, response) => {
         error: error.message,
         errorFull: JSON.stringify(error),
     });
+    next();
 });
 
 module.exports = {
